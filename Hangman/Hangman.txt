@@ -22,15 +22,7 @@ def generate_word(difficulty, difficulties, wordlist):
                 words.append(line.rstrip())
     return random.choice(words)
 
-def gui(currently, wrong, guess, max):
-    print('_'*40)
-    if guess == max:
-        last='LAST TRY'
-    else:
-        last=''
-    print('Attempt:',str(guess)+'/'+str(max),last)
-    print('Current:',' '.join(currently))
-    print('Wrong:',''.join(wrong))
+
 
 def guess_input(word_to_guess, max):
     currently = ['_' for _ in word_to_guess]
